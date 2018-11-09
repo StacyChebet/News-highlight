@@ -1,3 +1,6 @@
+[% extends 'base.html' %]
+{% import 'macros.html' as macro %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,10 +8,14 @@
         {% if title%}
         <title> {{title}} </title>
         {% else %}
-        <title>Quicker than a quickie</title>
+        <title>Fast and reliable way to get news</title>
         {% endif %}
     </head>
     <body>
-        
+        <!--Headlines section-->
+        <h2>NEWS HEADLINES</h2>
+            <ul>
+                {{ macro.displayHeadlinesList(headlines) }}
+            </ul>
     </body>
 </html>
