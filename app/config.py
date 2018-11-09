@@ -15,3 +15,5 @@ class DevConfig(Config):
     Developement configuration child class
     '''
     pass
+
+    DEBUG = True
