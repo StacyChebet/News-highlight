@@ -8,3 +8,10 @@ class ProdConfig(Config):
     '''
     Production configuration child class
     '''
+    pass
+
+class DevConfig(Config):
+    '''
+    Developement configuration child class
+    '''
+    pass
