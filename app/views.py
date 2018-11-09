@@ -7,5 +7,5 @@ def index():
     '''
     Returns index page and its data
     '''
-    title = 'News Highlight'
+    title = 'News Highlight- Quicker than a quickie'
     return render_template('index.html', title = title)
