@@ -1,0 +1,13 @@
+{% macro displayHeadlinesList(headlines_list) %}
+
+    {% for headline in headlines_list%}
+    <div class = "container">
+        <h1 class = "headline-title"><b></h1>{{ headline.title }}</b></h1>
+            <img src = "{{headline.urlToImage}}" alt = "{{headline.title}} image" class = "img-responsive">
+            <p>{{ headline.description}}</p>
+            <p><b>Published by</b> {{ headline.author}} <b>on</b> {{ headline.publishedAt}}</p>
+            <a href = {{headline.url}}>View Story</a>
+    </div>
+            
+    {% endfor %}
+{% endmacro %}

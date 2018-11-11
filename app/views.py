@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_headlines, get_article
+from .request import get_headlines, get_headline
 
 #Views
 @app.route ('/')
@@ -11,6 +11,15 @@ def index():
 
     #Getting headlines
     news_headlines = get_headlines()
-    print (news_headlines)
     title = 'News Highlight- Fast and reliable way to get news'
     return render_template('index.html', title = title, headlines = news_headlines)
+
+@app.route ('/headlines/title')
+def headlines(title):
+    '''
+    View headlines page function that returns headlines details page and its data
+    '''
+    headline = get_article(title)
+    title = f'{article.title}'
+
+    return render_template('headlines.html', title = title, headline = headline)
